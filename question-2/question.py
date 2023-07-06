@@ -1,13 +1,15 @@
+# Complexity: O(n)
+
 def isRepeted(frequencyMap: map, char: str) -> bool:
     return True if frequencyMap[char] > 1 else False
 
-def remove_duplicate_char(string: str) -> str:
+def solve(string: str) -> str:
     frequencyMap = {}
-    ans = ''
+    answer = ''
     
     for index, char in enumerate(string):
         if (char == ''):
-            ans += char
+            answer += char
             continue
 
         if char in frequencyMap.keys():
@@ -16,6 +18,6 @@ def remove_duplicate_char(string: str) -> str:
             frequencyMap[char] = 1
 
         if not isRepeted(frequencyMap, char):
-            ans += char
+            answer += char
     
-    return ans
+    return answer
