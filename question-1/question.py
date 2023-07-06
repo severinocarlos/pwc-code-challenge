@@ -1,7 +1,7 @@
-def reverse_string(string: str) -> str:
+def solve(string: str) -> str:
     words: list = string.split()
 
-    reservedList = reversed(words)
-    reverse_string = " ".join(reservedList)
+    reversedList = reversed(words)
+    reversed_string = " ".join(reversedList)
 
-    return reverse_string
+    return reversed_string

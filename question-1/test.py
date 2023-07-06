@@ -1,15 +1,31 @@
 import unittest
-from question import reverse_string
+from question import solve
 
 class TestSuite(unittest.TestCase):
+
     def test_case_one(self):
-        self.assertEqual(reverse_string('Hello, World! OpenAI is amazing.'), 'amazing. is OpenAI World! Hello,')
+        _input = 'Hello, World! OpenAI is amazing.'
+        expected_output = 'amazing. is OpenAI World! Hello,'
+
+        output = solve(_input)
+        print(f'Case:\nOutput: {output}    |   Expected Output: {expected_output}\n')
+        self.assertEqual(output, expected_output)
 
     def test_case_two(self):
-        self.assertEqual(reverse_string('PWC | Code Challenge'), 'Challenge Code | PWC')
+        _input = 'PWC | Code Challenge'
+        expected_output = 'Challenge Code | PWC'
+
+        output = solve(_input)
+        print(f'Case:\nOutput: {output}    |   Expected Output: {expected_output}\n')
+        self.assertEqual(output, expected_output)
     
     def test_case_three(self):
-        self.assertEqual(reverse_string('Code, Coffee and Algorithm!!'), 'Algorithm!! and Coffee Code,')
+        _input = 'Code, Coffee and Algorithm!!'
+        expected_output = 'Algorithm!! and Coffee Code,'
+
+        output = solve(_input)
+        print(f'Case:\nOutput: {output}    |   Expected Output: {expected_output}\n')
+        self.assertEqual(output, expected_output)
 
 if __name__ == '__main__':
     unittest.main()
