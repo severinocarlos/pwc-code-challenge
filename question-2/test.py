@@ -1,7 +1,7 @@
 import unittest
 from question import solve
 
-class TestSuit(unittest.TestCase):
+class TestSuite(unittest.TestCase):
     def test_case_one(self):
         _input = 'Hello, World!'
         expected_output = 'Helo, Wrd!'
