@@ -1,5 +1,5 @@
 import unittest
-from exercice import reverse_string
+from question import reverse_string
 
 class TestSuite(unittest.TestCase):
     def test_case_one(self):
