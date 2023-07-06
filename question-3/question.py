@@ -1,15 +1,15 @@
+# Complexity: O(n^2)
+
 def isPalindrome(string: str) -> str:
     reversed_string = string[::-1]
     return True if string == reversed_string else False
 
-def get_longest_palindromic_substring(string: str) -> str:
+def solve(string: str) -> str:
     substringsList = []
     string_size = len(string)
     answer = ''
     size_answer = 0
     
-    # Caso o tamanho string for == 1, retorna a mesma string
-    # Complexidade: O(n^2)
     if string_size == 1:
         return string
 
